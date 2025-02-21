@@ -8,6 +8,7 @@ https://api.telegram.org/bot<telegram_token>/getUpdates
 nexus-xyz – owner
 network-api – repo
 
+## Создание конфига
 Делаем конфигурацию config.json
 ```
 touch config.json
@@ -23,7 +24,7 @@ nano config.json
 }
 ```
 
-
+## Запуск скрипта
 Создаем скрипт python из tmux (screen), чтобы удобно логи читать
 ```shell
 tmux new -s git_updates
