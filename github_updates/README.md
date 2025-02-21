@@ -16,11 +16,12 @@ nano config.json
 Вставляем конфигурацию
 ```JSON
 {
-  "telegram_token": “API TOCKEN”,
-  "chat_id": “11111111111”,
+  "telegram_token": "API tocken",
+  "chat_id": "11111111111",
   "owner": "nexus-xyz",
   "repo": "network-api"
-}```
+}
+```
 
 
 Создаем скрипт python из скрина, чтобы удобно логи читать
