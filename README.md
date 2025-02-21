@@ -1,7 +1,5 @@
 # Validator Automation Tools 🚀
 
-![Validator Automation Tools](https://drive.google.com/uc?export=view&id=1eu8sLvDmWGKSKvpdOVe03UPKxdAjASpT)
-
 ## 🔥 About the Project
 **Validator Automation Tools** is a set of tools for automating blockchain node management. 
 The project includes scripts for:
