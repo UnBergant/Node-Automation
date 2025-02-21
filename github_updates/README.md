@@ -1,10 +1,10 @@
-Подготовка:
-– Открываем @BotFather, создаем нового бота, копируем его telegram_token
-– Далее пишем в личку в бота. /start и какое нибудь сообщение
-– Из терминала или дергаем в браузере:
+## Подготовка:
+- Открываем @BotFather, создаем нового бота, копируем его telegram_token
+- Далее пишем в личку в бота. /start и какое нибудь сообщение
+- Из терминала или дергаем в браузере:
 https://api.telegram.org/bot<telegram_token>/getUpdates
-– Из поля chat: {id: <YOUT_CHAT_ID>} копируем YOUT_CHAT_ID
-– Находим интересующую нас репу, например https://github.com/nexus-xyz/network-api
+- Из поля chat: {id: <YOUT_CHAT_ID>} копируем YOUT_CHAT_ID
+- Находим интересующую нас репу, например https://github.com/nexus-xyz/network-api
 nexus-xyz – owner
 network-api – repo
 
