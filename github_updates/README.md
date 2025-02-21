@@ -24,16 +24,20 @@ nano config.json
 ```
 
 
-Создаем скрипт python из скрина, чтобы удобно логи читать
+Создаем скрипт python из tmux (screen), чтобы удобно логи читать
+```shell
+tmux new -s git_updates
+```
 ```
 touch get_updates.py
 nano get_updates.py
 ```
 Вставляем туда содержимое файла 
-
 get_updates.py
 ```
 python3 ./get_updates.py
 ```
+Выходим из tmux (screen)
+Ctrl + B, затем D
 
 Можно переделать на список репозиториев, но пока лень. Или вообще cli набросать, чтобы не редачить через nano. Посмотрим, если будет актуально
