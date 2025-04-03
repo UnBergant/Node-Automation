@@ -3,7 +3,7 @@ const swapButtonSelector = "#root-scroll-container > div > div > div.relative.fl
 const newOrderButtonSelector = "#root-scroll-container > div > div > div.relative.flex.justify-center > div.border.border-white\\/15.bg-card-2.text-card-foreground.shadow-sm.p-4.md\\:p-6.rounded-\\[1\\.5rem\\].w-full.sm\\:w-\\[484px\\].md\\:w-\\[460px\\].lg\\:w-\\[532px\\] > div > section > div.pt-4 > a";
 const goBackButtonSelector = "#root-scroll-container > div > div > div.relative.flex.justify-center > div.border.border-white\\/15.bg-card-2.text-card-foreground.shadow-sm.p-4.md\\:p-6.rounded-\\[1\\.5rem\\].w-full.sm\\:w-\\[484px\\].md\\:w-\\[460px\\].lg\\:w-\\[532px\\] > div > section > div.pt-4 > div > button"
 
-const AMOUNT = 1;
+const AMOUNT = 6;
 const TIMEOUT_INTERVAL = 1000;
 
 const clickEl = ({selector, text, desc}) => {
