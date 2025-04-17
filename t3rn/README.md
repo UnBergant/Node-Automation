@@ -1,61 +1,112 @@
-# 🔄 Automatic Token Swap in the Sepolia Test Network
+# 🛠 T3rn Project: Useful Scripts for Automation & Analysis
 
-## 📝 Description
-
-This script automates the token swapping process on the [Unlock3d](https://unlock3d.t3rn.io/) website in the Sepolia test network. It allows performing multiple swaps by splitting a large amount into smaller transactions, which can be useful due to transaction limits. Large transactions often get stuck in a Pending status and later require a Reclaim.
-
-## ✅ Prerequisites
-
-Before running the script, make sure to:
-
-1. 🔗 Connect your wallet (MetaMask).
-2. 🔄 Select the networks you want to swap between.
-3. ⚠️ Ensure you have clicked the `Connect to <chainName>` button.
-
-> **Important!** Each transaction must be manually confirmed in MetaMask. This is a security requirement and cannot be automated.
-
-## 🚀 Installation & Execution
-
-The script is inserted into the browser console and executed by pressing `Enter`.
-
-### 🔹 Option 1: Manual Execution
-
-1. Open the [Unlock3d](https://unlock3d.t3rn.io/) website.
-2. Open DevTools (console) in your browser (`F12` or `Ctrl + Shift + I` / `Cmd + Option + I`).
-3. Switch to the `Console` tab.
-4. Paste the script and press `Enter`.
-
-### 🔹 Option 2: Save as a Snippet
-
-For convenience, you can save the script in `Snippets` in DevTools:
-
-1. Open DevTools (`F12` → `Sources` → `Snippets`).
-2. Create a new snippet (`New Snippet`).
-3. Paste the code and save it.
-4. Run it anytime using `Run`.
-
-## ⚙️ Configurable Parameters
-
-The only parameter worth modifying is `AMOUNT` (the amount for a single swap). You can change it in the script before execution:
-
-```javascript
-const AMOUNT = 0.5; // Set your desired value
-```
-
-## ⚠️ Possible Issues & Solutions
-
-- ❌ **Transaction too large to process.**
-  - Split the amount into smaller parts by adjusting `AMOUNT`.
-- ❌ **The script does not click the `Swap` button.**
-  - Ensure you have selected the networks and connected your wallet.
-  - Check that you have clicked the `Connect to <chainName>` button.
-- ❌ **The script does not start.**
-  - Try refreshing the page and pasting the code again.
-
-## ⚠️ Disclaimer
-
-This script is intended for use only in the Sepolia test network and is used at your own risk. The developer is not responsible for any loss of test tokens or account restrictions on the website.
+This repository contains **browser-based automation scripts** designed for use with the [T3rn](https://unlock3d.t3rn.io/) ecosystem and testnet tools.  
+All scripts are **executed directly in the browser console**, making them easy to run without extra setup.
 
 ---
 
-🚀 Happy swapping! 🔥
+## 🔄 Script 1: Automatic Token Swap (Sepolia Test Network)
+
+### 📝 Description
+
+This script automates token swapping on the [Unlock3d](https://unlock3d.t3rn.io/) website in the Sepolia test network.  
+It performs multiple swaps by splitting a large transaction into smaller ones to avoid stuck "Pending" status or the need to reclaim.
+
+---
+
+### ✅ Prerequisites
+
+Before running the script:
+
+1. 🔗 Connect your MetaMask wallet.
+2. 🔄 Select the source and target networks.
+3. ✅ Click the `Connect to <chainName>` button if required.
+
+> 💡 **Note**: Transactions must be manually approved in MetaMask for security reasons.
+
+---
+
+### 🚀 Execution
+
+1. Open [Unlock3d](https://unlock3d.t3rn.io/).
+2. Open browser DevTools (`F12` / `Ctrl+Shift+I` / `Cmd+Option+I`).
+3. Go to the `Console` tab.
+4. Paste the script from `swap.js` and press `Enter`.
+
+---
+
+### 🔧 Configurable Parameter
+
+```js
+const AMOUNT = 0.5; // Amount of ETH per swap
+```
+
+---
+
+### ❗️ Troubleshooting
+
+- **Transactions stuck** → Lower `AMOUNT`.
+- **Swap button not clicked** → Ensure all connections and network selections are complete.
+- **Script not running** → Refresh the page and try again.
+
+---
+
+## 🌱 Script 2: Farmed Token Balance Tracker
+
+### 📝 Description
+
+This script checks how much of the `BRN` token was farmed (accumulated) via swap activity over a specified time period (default: 1 hour).  
+It fetches and compares balances using the T3rn explorer API.
+
+---
+
+### ✅ Requirements
+
+1. Open the following page in your browser, replacing `<YOUR_ADDRESS>` with your actual wallet address:  
+   🔗 [https://b2n.explorer.caldera.xyz/address/<YOUR_ADDRESS>](https://b2n.explorer.caldera.xyz/address/<YOUR_ADDRESS>)
+
+2. Open DevTools (`F12`) → Console.
+
+3. Paste the script from `balanceAnalysis.js` and run.
+
+---
+
+### ⚙️ Configurable Parameters
+
+```js
+const address = '<YOUR_ADDRESS>'; // your wallet address
+const timeDiff = 1 * 60 * 60 * 1000; // Time window: 1 hour
+const mode = 'farm'; // Currently only 'farm' mode is supported
+```
+
+---
+
+### 📊 Output Summary
+
+- 📈 Balance now
+- 📉 Balance N hours ago
+- 🔁 Farmed amount (based on swap transactions)
+- 📥 Total and swap transaction counts
+
+Sample output:
+```
+🗓 15.04 17:32 🔁 0.023145 BRN | 💰 8397.543 BRN
+📈 15.04 17:32 | 8397.543 BRN (Newest)
+📉 15.04 16:32 | 8395.125 BRN (1 hour ago)
+📥 Txs (swap): 14
+📥 Txs (total): 32
+🔁 Delta (swap): 2.418 BRN
+🔁 Delta (total): 3.042 BRN
+```
+
+---
+
+## ⚠️ Disclaimer
+
+These scripts are intended for educational and testing purposes only.  
+They operate on the Sepolia testnet and T3rn explorer, and are used at your own risk.
+
+---
+
+🚀 Happy hacking & farming!  
+💬 Got feedback or improvements? PRs welcome!
