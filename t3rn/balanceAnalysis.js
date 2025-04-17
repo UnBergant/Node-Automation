@@ -2,7 +2,7 @@ const ONE_HOUR = 60 * 60 * 1000;
 const ONE_DAY = ONE_HOUR * 24;
 const POINT_POSTION = 1000000000000000000;
 
-const address = '0xFA4f6D7fe9Fb03F5A8C6412f3B3883Fff9475565'
+const address = '<YOUR_WALLET_ADDRESS>'
 const timeDiff = ONE_HOUR;
 
 const MODE = {
