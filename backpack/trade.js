@@ -2,14 +2,12 @@ market = document.querySelector("#__next > div > div.flex.flex-1.flex-col.overfl
 
 limit = document.querySelector("#__next > div > div.flex.flex-1.flex-col.overflow-auto.bg-baseBackgroundL0.text-baseTextHighEmphasis > div > div > div:nth-child(2) > div:nth-child(1) > div > div.flex.flex-col.gap-4 > div.flex.items-center.justify-between.flex-row > div > div.flex.justify-center.flex-col.cursor-pointer.rounded-lg.py-1.text-sm.font-medium.outline-none.hover\\:opacity-90.h-\\[32px\\].text-baseTextMedEmphasis.px-3");
 
-buyLongTab = document.querySelector("#__next > div > div.flex.flex-1.flex-col.overflow-auto.bg-baseBackgroundL0.text-baseTextHighEmphasis > div > div > div:nth-child(2) > div:nth-child(1) > div > div > button:nth-of-type(1)");
+buyLongTab = document.querySelector("#__next > div > div.bg-base-background-l0.text-high-emphasis.flex.flex-1.flex-col.overflow-auto > div > div > div.flex.flex-col.gap-2 > div:nth-child(1) > div > div.bg-base-background-l2.flex.h-\\[48px\\].w-full.overflow-hidden.rounded-xl > button.w-full.overflow-hidden.rounded-xl.text-sm.font-semibold.bg-green-background-transparent.text-green-text")
 
-sellShortTab = document.querySelector("#__next > div > div.flex.flex-1.flex-col.overflow-auto.bg-baseBackgroundL0.text-baseTextHighEmphasis > div > div > div:nth-child(2) > div:nth-child(1) > div > div > button:nth-of-type(2)");
-
+sellShortTab = document.querySelector("#__next > div > div.bg-base-background-l0.text-high-emphasis.flex.flex-1.flex-col.overflow-auto > div > div > div.flex.flex-col.gap-2 > div:nth-child(1) > div > div.bg-base-background-l2.flex.h-\\[48px\\].w-full.overflow-hidden.rounded-xl > button.w-full.rounded-xl.text-sm.font-semibold.text-low-emphasis.hover\\:text-red-text")
 buySellButtonSwelector = "#__next > div > div.flex.flex-1 > div > div > div:nth-child(2) > div:nth-child(1) > div > div.flex > div.flex.flex-col > div > button > div";
 
-liquidateMarketSelector = `#__next > div > div.flex.flex-1.flex-col.overflow-auto.bg-baseBackgroundL0.text-baseTextHighEmphasis > div > div > div.flex.flex-col.flex-1.gap-2 > div:nth-child(2) > div:nth-child(1) > div > div.w-full.px-4.pb-4 > div > table > tbody > tr > td:nth-child(9) > div > button:nth-of-type(2)`;
-
+liquidateMarketSelector = `#__next > div > div.bg-base-background-l0.text-high-emphasis.flex.flex-1.flex-col.overflow-auto > div > div > div.flex.flex-col.flex-1 > div:nth-child(2) > div:nth-child(1) > div > div.w-full.px-4.pb-4 > table > tbody > tr > td:nth-child(10) > div > button:nth-child(2)`
 liquidationBuySellButtonSelector = `body > div.fixed.bottom-0.left-0 > div > div > section > div > div > div > div > div > button`
 
 slyderSelector = `[aria-label="Percentage Slider"]`;
@@ -55,7 +53,7 @@ function getRandomDelay() {
   return randomSeconds * 60 * 1000;
 }
 
-function delay(ms) 
+function delay(ms) {
   console.log(`⏳ Ждем ${ms} мс...`);
   return new Promise(resolve => setTimeout(resolve, ms));
 }
